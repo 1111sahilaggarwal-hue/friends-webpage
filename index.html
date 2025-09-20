@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Bestfriend</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      min-height: 150vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: url("friend.jpeg") no-repeat center center fixed;
+      background-size: 100% 100%;  /* full background */
+      position: relative;
+    }
+
+    /* Dark overlay */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px black;
+    }
+
+    .photo {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+
+    .photo img {
+      width: 180px;
+      border-radius: 15px;
+      border: 3px solid white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+      animation: spin 6s linear infinite;
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #007bff;
+      color: white;
+      font-size: 1em;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: 0.3s;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>Bestfriend Forever</h1>
+    <p>
+Friendship is one of the most beautiful and valuable bonds in life.<br>
+True friends are those who stand by you through thick and thin, <br>
+share your joys and sorrows, and make every moment memorable.<br>
+They bring laughter, support, and encouragement, turning ordinary days into extraordinary memories.<br>
+A friend understands you without judgment, listens without interruption, and cares without condition.<br>
+The bond of friendship is built on trust, honesty, and mutual respect, creating connections that can last a lifetime.<br>
+Celebrating friendship means cherishing these moments, valuing each other’s presence, <br>
+and creating memories that will be treasured forever.
+    </p>
+    <div class="photo">
+      <img src="friend1.jpeg" alt="friend1's Photo">
+      <img src="friends.jpeg" alt="friends's's Photo">
+      <img src="friends1.jpeg" alt="friends1's Photo">
+       <img src="friend2.jpeg" alt="friends2's Photo">
+       <img src="friend2.jpeg" alt="friend2's Photo">
+    </div>
+
+    <audio id="bgm" loop>
+      <source src="Yaari Hai.mp3" type="audio/mpeg">
+    <h1> My friends</h1>
+    </audio>
+    <button class="btn" oncl  ick="document.getElementById('bgm').play()">🎵 Play Bestfriend Song</button>
+  </div>
+</body>
+</html>
