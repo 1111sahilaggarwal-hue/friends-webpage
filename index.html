@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>friends Memories</title>
+  <title>Friends Memories</title>
   <style>
     * {
       margin: 0;
@@ -21,11 +21,10 @@
       align-items: center;
       flex-direction: column;
       background: url("friend.jpeg") no-repeat center center fixed;
-      background-size: 100% 100%;  /* full background */
+      background-size: cover;
       position: relative;
     }
 
-    /* Dark overlay */
     body::before {
       content: "";
       position: absolute;
@@ -89,41 +88,50 @@
       font-weight: bold;
       border-radius: 8px;
       transition: 0.3s;
-      margin-top: 15px;
+      margin: 10px 5px;
       cursor: pointer;
     }
 
     .btn:hover {
       background: #0056b3;
     }
+
+    audio {
+      display: none; /* hide default audio controls */
+    }
   </style>
 </head>
 <body>
   <div class="content">
-    <h1>Friends</h1>
+    <h1>Friends Memories</h1>
     <p>
-Friendship is one of the most beautiful and valuable bonds in life.<br>
-True friends are those who stand by you through thick and thin, <br>
-share your joys and sorrows, and make every moment memorable.<br>
-They bring laughter, support, and encouragement, turning ordinary days into extraordinary memories.<br>
-A friend understands you without judgment, listens without interruption, and cares without condition.<br>
-The bond of friendship is built on trust, honesty, and mutual respect, creating connections that can last a lifetime.<br>
-Celebrating friendship means cherishing these moments, valuing each other’s presence, <br>
-and creating memories that will be treasured forever.
+      Friendship is one of the most beautiful and valuable bonds in life.<br>
+      True friends are those who stand by you through thick and thin, <br>
+      share your joys and sorrows, and make every moment memorable.<br>
+      They bring laughter, support, and encouragement, turning ordinary days into extraordinary memories.<br>
+      A friend understands you without judgment, listens without interruption, and cares without condition.<br>
+      The bond of friendship is built on trust, honesty, and mutual respect, creating connections that can last a lifetime.<br>
+      Celebrating friendship means cherishing these moments, valuing each other’s presence, <br>
+      and creating memories that will be treasured forever.
     </p>
+
     <div class="photo">
       <img src="friend1.jpeg" alt="friend1's Photo">
-      <img src="friend2.jpeg" alt="friends2's Photo">
-      <img src="friends.jpeg" alt="friends's's Photo">
+      <img src="friend2.jpeg" alt="friend2's Photo">
+      <img src="friends.jpeg" alt="friends's Photo">
       <img src="friends1.jpeg" alt="friends1's Photo">
-       <img src="friends2.jpeg" alt="friends2's Photo">
+      <img src="friends2.jpeg" alt="friends2's Photo">
     </div>
 
-  <audio id="bgm" loop>
-      <source src="yaari hai.mp3" type="audio/mpeg">
+    <!-- Audio -->
+    <audio id="bgm" loop>
+      <source src="yaarihai.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
     </audio>
-    <button class="btn" onclick="document.getElementById('bgm').play()">🎵 Play friend Song</button>
 
+    <!-- Custom Play/Pause Buttons -->
+    <button class="btn" onclick="document.getElementById('bgm').play()">🎵 Play Yaari Hai</button>
+    <button class="btn" onclick="document.getElementById('bgm').pause()">⏸ Pause</button>
   </div>
 </body>
 </html>
